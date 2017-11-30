@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- <meta charset="utf-8"> -->
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'app_one/css/style.css' %}" media="screen" title="no title"  charset="utf-8">
+    <title>Delete page</title>
+  </head>
+  <body>
+
+    <div class="miniwrap">
+      <h2>Are you sure you want to delete the following course?</h2>
+      <h4>Name: {{ course.name }}</h4>
+      <h4>Description: {{ course.desc }}</h4>
+
+<!-- No button routes back to index page -->
+<!-- Yes button routes to remove function in views.py -->
+      <a href='/'><button id="buttonB">No</button></a>
+      <a href='/remove/{{ course.id }}'><button id="buttonC">Yes! I want to delete this</button>
+
+    </div>
+  </body>
+</html>
