@@ -1,12 +1,14 @@
 <!DOCTYPE html>
-<html>
+<html lang = "en">
   <head>
-    <!-- <meta charset="utf-8"> -->
-    {% load static %}
-    <link rel="stylesheet" href="{% static 'app_one/css/style.css' %}" media="screen" title="no title"  charset="utf-8">
 
+    <!-- <meta charset="utf-8"> -->
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title>Index page</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'app_one/css/style.css' %}" media="screen" title="no title">
   </head>
+
   <body>
     <!-- <h1>index.html page</h1> -->
 
@@ -18,7 +20,7 @@
           <h2>Add a new course</h2>
           <h4>Name: <textarea name="name" rows="2" cols="55"></textarea></h4>
           <h4>Description: <textarea name = "desc" rows="4" cols="50"></textarea></h4>
-          <button type="submit" form="addcourse" value="Add">Add</button>
+          <button class="submit" form="addcourse" value="Add">Add</button>
         </form>
       </div>
 
