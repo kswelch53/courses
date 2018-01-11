@@ -3,7 +3,7 @@ from .models import Course
 from django.shortcuts import render, HttpResponse, redirect
 from django.contrib import messages
 
-# displays a forms on index.html that allows users to create and delete courses
+# displays a form on index.html that allows users to create and delete courses
 def index(request):
     print("This is index function in views.py")
     context = {
@@ -29,7 +29,7 @@ def addcourse(request):
         return redirect('/')
 
     # Else statement comes into play if length validations aren't met:
-    # This setup give only one error message; if both are invalid, only the first (class name) will show
+    # This setup gives only one error message; if both are invalid, only the first (class name) will show
     else:
         print("This is else statement")
     # Both inputs are too short
